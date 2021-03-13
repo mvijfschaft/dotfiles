@@ -1,0 +1,21 @@
+{
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.fontFamily": "Cascadia Code PL",
+    "editor.fontLigatures": true,
+    "files.autoSave": "onFocusChange",
+    "powershell.codeFormatting.autoCorrectAliases": true,
+    "powershell.integratedConsole.showOnStartup": false,
+    "window.zoomLevel": 0,
+    "git.autofetch": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "terminal.integrated.fontFamily": "MesloLGM NF",
+    "terminal.integrated.shell.windows": "${env:ProgramFiles}/PowerShell/7/pwsh.exe",
+    "terminal.integrated.shellArgs.windows": ["-NoLogo"],
+    "remote.SSH.remotePlatform": {
+        "mrpi": "linux"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.renderWhitespace": "all",
+}

@@ -1,0 +1,56 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            "type": "root",
+            "style": "powerline",
+            "foreground": "#111111",
+            "background": "#ffff46",
+            "properties": {
+              "root_icon": "\uF0E7"
+            }
+          },
+          {
+            "type": "session",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#ffffff",
+            "background": "#303030",
+            "properties": {
+                "default_user_name": "test",
+                "display_host": false,
+                "display_default": false
+            }
+          },
+          {
+            "type": "path",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#100e23",
+            "background": "#8db0c0",
+            "properties" : {
+                "home_icon": "\uF7DB",
+                "folder_icon": "\uF115",
+                "folder_separator_icon": " \uE0B1 ",
+                "style": "mixed"
+            }
+          },
+          {
+            "type": "git",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#193549",
+            "background": "#95ffa4"
+          }
+        ]
+      },
+      {
+        "type": "newline"
+      }
+    ],
+    "final_space": false
+  }
