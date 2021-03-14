@@ -17,6 +17,13 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 Enable-WindowsOptionalFeature -Online -All -FeatureName "Microsoft-Windows-Subsystem-Linux" -NoRestart -WarningAction SilentlyContinue | Out-Null
 wsl --set-default-version 2
 
+Write-Host "Manually install 'Ubuntu' from Microsoft Store ..."
+Write-Host "Make ubuntu default distro `wsl --setdafult <ubuntu version>..."
+Write-Host "Press any key when done"
+Read-Host
+
+wsl --setdefault Ubuntu
+
 ###############################################################################
 ### Security                                                                  #
 ###############################################################################
