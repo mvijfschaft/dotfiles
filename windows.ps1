@@ -24,6 +24,10 @@ Read-Host
 
 wsl --setdefault Ubuntu
 
+ubuntu run ./bash.sh
+
+Copy-Item -Path ".\configs\Ubuntu\.profile" -Destination "\\wsl$\Ubuntu\root\.profile"
+
 ###############################################################################
 ### Security                                                                  #
 ###############################################################################
