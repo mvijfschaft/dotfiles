@@ -25,6 +25,7 @@ scoop install sudo
 scoop install telegram
 scoop install vlc
 scoop install vscode
+scoop install winrar
 scoop install z
 
 ## PowerShell modules ##
