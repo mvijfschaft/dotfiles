@@ -1,79 +1,70 @@
-// To view the default settings, hold "alt" while clicking on the "Settings" button.
-// For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-  "tabSwitcherMode": "mru",
-  "wordDelimiters": " ",
   "profiles": {
     "defaults": {
       "colorScheme": "Pro",
-      "fontFace": "MesloGM NF",
+      "fontFace": "MesloLGMDZ NF",
       "fontSize": 11,
-      "backgroundImage": "Z:\\OneDrive\\Pictures\\Saved Pictures\terminalBG.png"
+      "useAcrylic": false,
+      "backgroundImageOpacity": 0.2,
+      "backgroundImage": "https://github.com/mvijfschaft/dotfiles/raw/main/configs/WindowsTerminal/background.png"
     },
     "list": [
       {
         "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
         "hidden": false,
         "name": "PowerShell",
-        "source": "Windows.Terminal.PowershellCore",
-        "fontFace": "MesloLGMDZ NF"
+        "source": "Windows.Terminal.PowershellCore"
       },
-      {
-        "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-        "hidden": false,
-        "name": "Ubuntu-18.04",
-        "source": "Windows.Terminal.Wsl",
-        "fontFace": "MesloLGMDZ NF"
-      },
+      {},
       {
         "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
         "hidden": false,
         "name": "Azure Cloud Shell",
-        "source": "Windows.Terminal.Azure",
-        "fontFace": "MesloLGMDZ NF"
+        "source": "Windows.Terminal.Azure"
       },
       {
+        "commandline": "ssh pi@mrpi",
         "guid": "{96ec9f2e-a6fd-4d90-812e-0d894988d6a9}",
         "name": "MRPi SSH",
-        "tabTitle": "MRPi - SSH",
-        "commandline": "ssh pi@mrpi",
-        "fontFace": "MesloLGMDZ NF"
+        "tabTitle": "MRPi - SSH"
       },
       {
-        "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
         "hidden": false,
-        "name": "Ubuntu-20.04",
-        "source": "Windows.Terminal.Wsl",
-        "fontFace": "MesloLGMDZ NF"
+        "name": "Ubuntu",
+        "source": "Windows.Terminal.Wsl"
       }
     ]
   },
-  // Add custom color schemes to this array
   "schemes": [
     {
-      "name": "Pro",
-      "black": "#0f1610",
-      "brightBlack": "#666666",
-      "white": "#CCCCCC",
-      "red": "#7c7c7c",
-      "brightRed": "#e50000",
-      "green": "#00a600",
-      "brightGreen": "#00d900",
-      "yellow": "#999900",
-      "brightYellow": "#e5e500",
-      "blue": "#2009db",
-      "brightBlue": "#0000ff",
-      "purple": "#b200b2",
-      "brightPurple": "#e500e5",
-      "cyan": "#00a6b2",
-      "brightCyan": "#00e5e5",
-      "brightWhite": "#e5e5e5",
       "background": "#000000",
-      "foreground": "#eff0eb"
+      "black": "#0F1610",
+      "blue": "#2009DB",
+      "brightBlack": "#666666",
+      "brightBlue": "#0000FF",
+      "brightCyan": "#00E5E5",
+      "brightGreen": "#00D900",
+      "brightPurple": "#E500E5",
+      "brightRed": "#E50000",
+      "brightWhite": "#E5E5E5",
+      "brightYellow": "#E5E500",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#00A6B2",
+      "foreground": "#EFF0EB",
+      "green": "#00A600",
+      "name": "Pro",
+      "purple": "#B200B2",
+      "red": "#7C7C7C",
+      "selectionBackground": "#FFFFFF",
+      "white": "#CCCCCC",
+      "yellow": "#999900"
     }
   ],
+  "tabSwitcherMode": "mru",
+  "wordDelimiters": " ",
   "actions": [
     {
       "command": "closePane",
@@ -153,9 +144,6 @@
       },
       "keys": "ctrl+9"
     },
-    // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-    // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-    // To learn more about selection, visit https://aka.ms/terminal-selection
     {
       "command": {
         "action": "copy",
@@ -167,15 +155,10 @@
       "command": "paste",
       "keys": "ctrl+v"
     },
-    // Press Ctrl+Shift+F to open the search box
     {
       "command": "find",
       "keys": "ctrl+shift+f"
     },
-    // Press Alt+Shift+D to open a new pane.
-    // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-    // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-    // To learn more about panes, visit https://aka.ms/terminal-panes
     {
       "command": {
         "action": "splitPane",
