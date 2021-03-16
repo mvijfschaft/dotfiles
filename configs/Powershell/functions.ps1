@@ -11,6 +11,14 @@ function New-Link ($target, $source) {
   New-Item -ItemType SymbolicLink -Path $source -Target (Resolve-Path $target)
 }
 
+function Confirm-Elevated {
+  # Get the ID and security principal of the current user account
+  $myIdentity = [System.Security.Principal.WindowsIdentity]::GetCurrent()
+  $myPrincipal = new-object System.Security.Principal.WindowsPrincipal($myIdentity)
+  # Check to see if we are currently running "as Administrator"
+  return $myPrincipal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)
+}
+
 function New-ConsoleApp {
   param (
     [Parameter(Mandatory = $true)]
