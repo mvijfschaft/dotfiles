@@ -103,7 +103,3 @@
 # Keep this section last so it can override settings above
 [include]
 	path = .gitconfig.custom
-
-[user]
-	email = mvijfschaft@hotmail.com
-	name = mvijfschaft
