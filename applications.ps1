@@ -54,6 +54,11 @@ New-Link ".\configs\WindowsTerminal\settings.json" "$env:LOCALAPPDATA\Packages\M
 New-Link ".\configs\WinGet\settings.json" "$env:LOCALAPPDATA\Microsoft\DesktopAppInstaller\LocalState\settings.json"
 New-Link ".\configs\Powershell\profile.ps1" $PROFILE.CurrentUserCurrentHost
 
+## Add custom settings ##
+New-Item-Check -Path ".\configs\Git" -Name ".gitconfig.custom" -SymlinkPath "~\.gitconfig.custom"
+$psPath = Split-Path $PROFILE.CurrentUserCurrentHost
+New-Item-Check -Path ".\configs\Powershell" -Name "profile.custom.ps1" -SymlinkPath "${psPath}\profile.custom.ps1"
+Remove-Variable $psPath
 
 ## WINGET ##
 winget install Microsoft.WindowsTerminalPreview -s msstore
