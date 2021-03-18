@@ -47,3 +47,26 @@ function New-ConsoleApp {
 
   edit . ./Program.cs
 }
+
+function New-Item-Check {
+  param (
+      [Parameter(Mandatory=$true)][string]$Path,
+      [Parameter(Mandatory=$true)][string]$Name,
+      [Parameter(Mandatory=$false)][string]$SymlinkPath
+  )
+
+  if ($Path -notmatch "/$" -or $Path -notmatch "\\$")
+  {
+    $Path += "\"
+  }
+
+  if(!(Test-Path $Path$Name))
+  {
+    New-Item -Path $Path -Name $Name -Type File
+  }
+
+  if($SymlinkPath)
+  {
+    New-Link $Path$Name $SymlinkPath
+  }
+}
