@@ -46,18 +46,18 @@ scoop install cascadia-code
 scoop install cascadia-code-pl
 scoop install Meslo-NF
 
-New-Link ".\configs\Git\.gitconfig" "~\.gitconfig"
-New-Link ".\configs\VSCode\settings.json" "$env:APPDATA\Code\User\settings.json"
-New-Link ".\configs\VSCode\keybindings.json" "$env:APPDATA\Code\User\keybindings.json"
-New-Link ".\configs\WindowsTerminal\settings.json" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json"
+New-Link ".\configs\git\.gitconfig" "~\.gitconfig"
+New-Link ".\configs\vscode\settings.json" "$env:APPDATA\Code\User\settings.json"
+New-Link ".\configs\vscode\keybindings.json" "$env:APPDATA\Code\User\keybindings.json"
+New-Link ".\configs\windowsterminal\settings.json" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json"
 # https://github.com/microsoft/winget-cli/releases
-New-Link ".\configs\WinGet\settings.json" "$env:LOCALAPPDATA\Microsoft\DesktopAppInstaller\LocalState\settings.json"
-New-Link ".\configs\Powershell\profile.ps1" $PROFILE.CurrentUserCurrentHost
+New-Link ".\configs\winget\settings.json" "$env:LOCALAPPDATA\Microsoft\DesktopAppInstaller\LocalState\settings.json"
+New-Link ".\configs\powershell\profile.ps1" $PROFILE.CurrentUserCurrentHost
 
 ## Add custom settings ##
-New-Item-Check -Path ".\configs\Git" -Name ".gitconfig.custom" -SymlinkPath "~\.gitconfig.custom"
+New-Item-Check -Path ".\configs\git" -Name ".gitconfig.custom" -SymlinkPath "~\.gitconfig.custom"
 $psPath = Split-Path $PROFILE.CurrentUserCurrentHost
-New-Item-Check -Path ".\configs\Powershell" -Name "profile.custom.ps1" -SymlinkPath "${psPath}\profile.custom.ps1"
+New-Item-Check -Path ".\configs\powershell" -Name "profile.custom.ps1" -SymlinkPath "${psPath}\profile.custom.ps1"
 Remove-Variable $psPath
 
 ## WINGET ##
