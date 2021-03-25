@@ -44,7 +44,14 @@
             "style": "powerline",
             "powerline_symbol": "\uE0B0",
             "foreground": "#193549",
-            "background": "#95ffa4"
+            "background": "#95ffa4",
+            "properties": {
+              "branch_icon": "\uE0A0 ",
+              "status_colors_enabled": true,
+              "ahead_color": "#99ff99",
+              "behind_color": "#ff9999",
+              "ahead_and_behind_color": "#ffff99"
+            }
           }
         ]
       },
