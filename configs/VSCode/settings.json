@@ -18,4 +18,10 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "editor.renderWhitespace": "all",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "default",
+            "filenamePattern": "git-rebase-todo"
+        }
+    ]
 }
