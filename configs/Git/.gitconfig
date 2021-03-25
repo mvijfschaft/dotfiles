@@ -55,9 +55,6 @@
 	renameLimit = 9999
 	tool = vscode
 
-[difftool "vscode"]
-	cmd = code --wait --diff $LOCAL $REMOTE
-
 [fetch]
 	prune = true
 
@@ -79,7 +76,7 @@
 
 [merge]
 	conflictStyle = diff3
-	tool = vscode
+		tool = vscode
 
 [mergetool]
 	keepBackup = false
