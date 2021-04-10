@@ -27,7 +27,9 @@ function dnn { dotnet new @args }
 function dnr { dotnet run @args }
 function dnw { dotnet watch @args }
 function dnwr { dotnet watch run @args }
-
+function dnc { cleanup @args }
+function dob { dnc -p "bin" -p "obj" }
+function dns { dotnet search @args}
 
 # Git
 function Get-GitMainGranch {

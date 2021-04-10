@@ -14,6 +14,7 @@ scoop install android-studio
 scoop install autohotkey
 scoop install calibre-normal
 scoop install delta
+scoop install dotnet-sdk
 scoop install filezilla
 scoop install firefox-developer
 scoop install musescore
@@ -45,6 +46,10 @@ npm install --global git-recent
 scoop install cascadia-code
 scoop install cascadia-code-pl
 scoop install Meslo-NF
+
+## Netcore tools ##
+dotnet tool install -g dotnet-cleanup
+dotnet tool install -g dotnet-search
 
 New-Link ".\configs\git\.gitconfig" "~\.gitconfig"
 New-Link ".\configs\vscode\settings.json" "$env:APPDATA\Code\User\settings.json"
