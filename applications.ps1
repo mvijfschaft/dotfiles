@@ -64,3 +64,4 @@ Remove-Variable $psPath
 winget install Microsoft.WindowsTerminalPreview -s msstore
 winget install Microsoft.PowerToys
 winget install Microsoft.PowerShell
+winget install Mojang.MinecraftLauncher
