@@ -20,5 +20,11 @@
             "viewType": "default",
             "filenamePattern": "git-rebase-todo"
         }
-    ]
+    ],
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.tips.enabled": false,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "breadcrumbs.enabled": false
 }
