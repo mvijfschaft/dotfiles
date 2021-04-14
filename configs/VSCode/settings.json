@@ -11,9 +11,6 @@
     "terminal.integrated.fontFamily": "MesloLGM NF",
     "terminal.integrated.shell.windows": "${env:ProgramFiles}/PowerShell/7/pwsh.exe",
     "terminal.integrated.shellArgs.windows": ["-NoLogo"],
-    "remote.SSH.remotePlatform": {
-        "mrpi": "linux"
-    },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
