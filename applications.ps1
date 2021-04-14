@@ -14,6 +14,7 @@ scoop install android-studio
 scoop install autohotkey
 scoop install calibre-normal
 scoop install delta
+scoop install docker-compose
 scoop install dotnet-sdk
 scoop install filezilla
 scoop install firefox-developer
@@ -66,6 +67,7 @@ New-Item-Check -Path ".\configs\powershell" -Name "profile.custom.ps1" -SymlinkP
 Remove-Variable $psPath
 
 ## WINGET ##
+winget install Docker.DockerDesktopEdge
 winget install Microsoft.WindowsTerminalPreview -s msstore
 winget install Microsoft.PowerToys
 winget install Microsoft.PowerShell
