@@ -26,5 +26,5 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.tips.enabled": false,
     "workbench.view.alwaysShowHeaderActions": true,
-    "breadcrumbs.enabled": false
+    "breadcrumbs.enabled": false,
 }
