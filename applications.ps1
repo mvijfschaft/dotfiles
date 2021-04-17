@@ -39,6 +39,10 @@ Install-Module -Name Recycle -Scope CurrentUser
 
 Add-PoshGitToProfile
 
+## Code Extensions (for correct settings) ##
+code --install-extension GitHub.github-vscode-theme
+code --install-extension vscode-icons-team.vscode-icons
+
 ## Npm ##
 npm i -g cordova
 npm install --global git-recent
