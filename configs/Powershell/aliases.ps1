@@ -6,7 +6,7 @@ Set-Alias -Name 'l' -Value 'ls'
 
 # Utilities
 Set-Alias -Name 'e' -Value 'edit'
-Set-Alias -Name 'edit' -Value 'code'
+Set-Alias -Name 'edit' -Value 'code-insiders'
 Set-Alias -Name 'o' -Value 'open'
 
 # Move to Recycle Bin instead of deleting
@@ -151,5 +151,5 @@ function open { if ($args) { Start-Process @args } else { Start-Process . } }
 $env:COLORTERM = 'truecolor'
 $env:COLUMNS = 170
 $env:DELTA_PAGER = 'less -rFX'
-$env:EDITOR = 'code --wait'
+$env:EDITOR = 'code-insiders --wait'
 $ESC = "`e"

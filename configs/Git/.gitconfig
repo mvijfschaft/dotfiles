@@ -78,7 +78,7 @@
 
 [merge]
 	conflictStyle = diff3
-		tool = vscode
+	tool = vscode
 
 [mergetool]
 	keepBackup = false

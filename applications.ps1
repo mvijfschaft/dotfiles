@@ -26,7 +26,7 @@ scoop install steam
 scoop install sudo
 scoop install telegram
 scoop install vlc
-scoop install vscode
+scoop install vscode-insiders
 scoop install winrar
 scoop install z
 
@@ -40,8 +40,8 @@ Install-Module -Name Recycle -Scope CurrentUser
 Add-PoshGitToProfile
 
 ## Code Extensions (for correct settings) ##
-code --install-extension GitHub.github-vscode-theme
-code --install-extension vscode-icons-team.vscode-icons
+code-insiders --install-extension GitHub.github-vscode-theme
+code-insiders --install-extension vscode-icons-team.vscode-icons
 
 ## Npm ##
 npm i -g cordova
@@ -59,6 +59,8 @@ dotnet tool install -g dotnet-search
 New-Link ".\configs\git\.gitconfig" "~\.gitconfig"
 New-Link ".\configs\vscode\settings.json" "$env:APPDATA\Code\User\settings.json"
 New-Link ".\configs\vscode\keybindings.json" "$env:APPDATA\Code\User\keybindings.json"
+New-Link ".\configs\vscode\settings.json" "$env:APPDATA\Code - Insiders\User\settings.json"
+New-Link ".\configs\vscode\keybindings.json" "$env:APPDATA\Code - Insiders\User\keybindings.json"
 New-Link ".\configs\windowsterminal\settings.json" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json"
 # https://github.com/microsoft/winget-cli/releases
 New-Link ".\configs\winget\settings.json" "$env:LOCALAPPDATA\Microsoft\DesktopAppInstaller\LocalState\settings.json"
