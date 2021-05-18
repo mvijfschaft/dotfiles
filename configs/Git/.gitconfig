@@ -20,8 +20,6 @@
 
 [core]
 	pager = delta
-	autocrlf = false
-	eol = lf
 
 [credential]
 	helper = manager-core
