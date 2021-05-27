@@ -15,12 +15,9 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "editor.renderWhitespace": "all",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "default",
-            "filenamePattern": "git-rebase-todo"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "default"
+    },
     "workbench.tree.indent": 20,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.iconTheme": "vscode-icons",
