@@ -17,6 +17,7 @@ scoop install delta
 scoop install docker-compose
 scoop install filezilla
 scoop install firefox-developer
+scoop install Keypirinha
 scoop install musescore
 scoop install nodejs
 scoop install nodejs-np
@@ -63,6 +64,7 @@ New-Link ".\configs\windowsterminal\settings.json" "$env:LOCALAPPDATA\Packages\M
 # https://github.com/microsoft/winget-cli/releases
 New-Link ".\configs\winget\settings.json" "$env:LOCALAPPDATA\Microsoft\DesktopAppInstaller\LocalState\settings.json"
 New-Link ".\configs\powershell\profile.ps1" $PROFILE.CurrentUserCurrentHost
+New-Link ".\configs\keypirinha\Keypirinha.ini" "$env:HOMEPATH\scoop\apps\Keypirinha\current\portable\Profile\User\Keypirinha.ini"
 
 ## Add custom settings ##
 New-Item-Check -Path ".\configs\git" -Name ".gitconfig.custom" -SymlinkPath "~\.gitconfig.custom"
