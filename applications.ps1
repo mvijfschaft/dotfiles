@@ -64,7 +64,9 @@ New-Link ".\configs\windowsterminal\settings.json" "$env:LOCALAPPDATA\Packages\M
 # https://github.com/microsoft/winget-cli/releases
 New-Link ".\configs\winget\settings.json" "$env:LOCALAPPDATA\Microsoft\DesktopAppInstaller\LocalState\settings.json"
 New-Link ".\configs\powershell\profile.ps1" $PROFILE.CurrentUserCurrentHost
-New-Link ".\configs\keypirinha\Keypirinha.ini" "$env:HOMEPATH\scoop\apps\Keypirinha\current\portable\Profile\User\Keypirinha.ini"
+New-Link ".\configs\keypirinha\Keypirinha.ini" "~\scoop\apps\Keypirinha\current\portable\Profile\User\Keypirinha.ini"
+New-Link ".\configs\ahk\AutoHotkeyU64.ahk" "~\Documents\AutoHotkeyU64.ahk"
+New-Link ".\configs\ahk\AutoHotkeyU64.custom.ahk" "~\Documents\AutoHotkeyU64.custom.ahk"
 
 ## Add custom settings ##
 New-Item-Check -Path ".\configs\git" -Name ".gitconfig.custom" -SymlinkPath "~\.gitconfig.custom"

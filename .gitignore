@@ -1,2 +1,4 @@
 *default.ps1
-*custom*
+*.custom
+*.custom.*
+!*.sample
