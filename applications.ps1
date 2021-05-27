@@ -15,7 +15,6 @@ scoop install autohotkey
 scoop install calibre-normal
 scoop install delta
 scoop install docker-compose
-scoop install dotnet-sdk
 scoop install filezilla
 scoop install firefox-developer
 scoop install musescore
@@ -26,7 +25,6 @@ scoop install steam
 scoop install sudo
 scoop install telegram
 scoop install vlc
-scoop install vscode-insiders
 scoop install winrar
 scoop install z
 
@@ -78,3 +76,5 @@ winget install Microsoft.WindowsTerminalPreview -s msstore
 winget install Microsoft.PowerToys
 winget install Microsoft.PowerShell
 winget install Mojang.MinecraftLauncher
+winget install Microsoft.dotnetPreview
+winget install Microsoft.VisualStudioCode.Insiders
