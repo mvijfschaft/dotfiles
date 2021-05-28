@@ -27,6 +27,9 @@
           }
         },
         {
+          "type": "text"
+        },
+        {
           "type": "path",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
@@ -38,6 +41,9 @@
             "folder_separator_icon": " \uE0B1 ",
             "style": "mixed"
           }
+        },
+        {
+          "type": "text"
         },
         {
           "type": "git",
