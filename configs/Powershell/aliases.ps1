@@ -7,6 +7,7 @@ Set-Alias -Name 'l' -Value 'ls'
 # Utilities
 Set-Alias -Name 'e' -Value 'edit'
 Set-Alias -Name 'edit' -Value 'code-insiders'
+Set-Alias -Name 'ip' -Value 'Get-MyIp'
 Set-Alias -Name 'o' -Value 'open'
 
 # Move to Recycle Bin instead of deleting
@@ -142,6 +143,12 @@ function / { Set-Location '/' }
 function \ { Set-Location '\' }
 function ~ { Set-Location '~' }
 function .. { Set-Location '..' }
+
+<#
+  .SYNOPSIS
+  Get public IP
+#>
+function Get-MyIp { Invoke-RestMethod 'https://ident.me/' }
 
 # Miscellaneous
 function la { Get-ChildItem -Force @args }
