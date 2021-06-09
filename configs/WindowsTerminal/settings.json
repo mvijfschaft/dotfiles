@@ -95,26 +95,22 @@
         },
         {
             "command": "unbound",
-            "keys": "win+`"
-        },
-        {
-            "command": "unbound",
-            "keys": "win+\u00e7"
-        },
-        {
-            "command": "unbound",
             "keys": "win+alt+`"
         },
         {
             "command": "unbound",
-            "keys": "win+\u00f1"
+            "keys": "win+ctrl+alt+n"
+        },
+        {
+            "command": "unbound",
+            "keys": "win+ctrl+alt+,"
         },
         {
             "command": 
             {
                 "action": "quakeMode"
             },
-            "keys": "win+alt+\u00e7"
+            "keys": "win+`"
         },
         {
             "command": 
