@@ -230,6 +230,9 @@ SetTitleMatchMode, RegEx
 ::^9::⁹     ; SUPERSCRIPT NINE
 ::^n::ⁿ     ; SUPERSCRIPT LATIN SMALL LETTER N
 
+::;a::ª     ; FEMININE ORDINAL INDICATOR
+::;o::º     ; MASCULINE ORDINAL INDICATOR
+
 ; Hotstrings below don't trigger when inside another word
 #Hotstring ?0
 
