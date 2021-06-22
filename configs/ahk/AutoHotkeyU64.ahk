@@ -156,7 +156,7 @@ SetTitleMatchMode, RegEx
 ::tm::™             ; TRADE MARK SIGN
 ::deg::°            ; DEGREE SIGN
 ::nbsp::{U+00A0}    ; NO-BREAK SPACE
-
+::l.l::ŀl           ; LATIN SMALL L WITH MIDDLE DOT + L (CATALAN)
 ; International characters, based on Windows US International keyboard layout
 ; https://support.microsoft.com/en-us/help/306560/how-to-use-the-united-states-international-keyboard-layout-in-windows
 ::'a::á
