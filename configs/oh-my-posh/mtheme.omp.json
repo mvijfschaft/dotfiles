@@ -53,6 +53,8 @@
           "background": "#95ffa4",
           "properties": {
             "branch_icon": "\uE0A0 ",
+            "branch_gone_icon": "\uD83D\uDC80",
+            "display_status_detail": true,
             "status_colors_enabled": true,
             "ahead_color": "#99ff99",
             "behind_color": "#ff9999",
