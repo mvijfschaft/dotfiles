@@ -30,11 +30,11 @@ scoop install winrar
 scoop install z
 
 ## PowerShell modules ##
-Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
-Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser
-Install-Module PSColor -Scope CurrentUser
-Install-Module -Name Recycle -Scope CurrentUser
+Install-Module -Name oh-my-posh -Scope CurrentUser -Force
+Install-Module -Name posh-git -Scope CurrentUser -Force
+Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck -Force
+Install-Module -Name Recycle -Scope CurrentUser -Force
+Install-Module -Name Terminal-Icons -Scope CurrentUser -Force
 
 Add-PoshGitToProfile
 

@@ -2,10 +2,11 @@
 
 Import-Module oh-my-posh
 Import-Module posh-git
-Import-Module PSColor
-$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
+Import-Module Terminal-Icons
 Import-Module PSReadLine
 Import-Module Recycle
+
+$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
 
 Set-PoshPrompt -Theme  "$configPath\oh-my-posh\mtheme.omp.json"
 function Set-PoshContext { $env:TITLE = Get-PromptPath }
