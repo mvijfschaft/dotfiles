@@ -32,7 +32,7 @@ scoop install z
 ## PowerShell modules ##
 Install-Module -Name oh-my-posh -Scope CurrentUser -Force
 Install-Module -Name posh-git -Scope CurrentUser -Force
-Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck -Force
+Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -SkipPublisherCheck -Force
 Install-Module -Name Recycle -Scope CurrentUser -Force
 Install-Module -Name Terminal-Icons -Scope CurrentUser -Force
 
