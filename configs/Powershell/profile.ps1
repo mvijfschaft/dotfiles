@@ -1,17 +1,15 @@
-﻿$configPath = (Get-Item $PSCommandPath).Target.Split("\Powershell\profile.ps1")[0];
+﻿$Global:ProfilePath = (Get-Item $PSCommandPath).Target # real path (non-symlinked)
+$Global:ProfileDir = Split-Path $ProfilePath -Parent
+$Global:Root = Split-Path $ProfileDir -Parent
+$Global:DotfilesOptions = @{
+    Git = @{
+        Dev  = @('develop')
+        Main = @('main', 'master')
+    }
+}
 
-Import-Module oh-my-posh
-Import-Module posh-git
-Import-Module Terminal-Icons
-Import-Module PSReadLine
-Import-Module Recycle
+# Execute all modules
+Get-ChildItem $ProfileDir/modules -Filter *.psm1 -File | ForEach-Object { Import-Module $_.FullName }
 
-$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
-
-Set-PoshPrompt -Theme  "$configPath\oh-my-posh\mtheme.omp.json"
-function Set-PoshContext { $env:TITLE = Get-PromptPath }
-
-$files = (Get-ChildItem -path $configPath"\powershell\" | Where-Object { $_.attributes -ne "directory" -and (
-      ($_.name -NotLike "profile.ps1") -and  ($_.name -Like "*.ps1"))
-})
-foreach ($file in $files) { . $file }
+if(!(Test-Path -Path $ProfileDir/profile.custom.ps1)) { New-Item $ProfileDir/profile.custom.ps1 | Out-Null }
+. $ProfileDir/profile.custom.ps1

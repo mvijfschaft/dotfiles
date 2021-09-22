@@ -1,5 +1,3 @@
-# Below copied from https://github.com/PowerShell/PSReadLine/blob/v2.2.0-beta2/PSReadLine/SamplePSReadLineProfile.ps1
-
 using namespace System.Management.Automation
 using namespace System.Management.Automation.Language
 
