@@ -1,4 +1,4 @@
-. "./configs/powershell/functions.ps1"
+. "./configs/powershell/profile.ps1"
 
 if (-Not (Confirm-Elevated)) {
   Write-Error -Message "you have to run this script with administrator rights" -Category PermissionDenied
