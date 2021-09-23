@@ -1,0 +1,37 @@
+/* Without windows buttons */
+
+/*
+#main-window[sizemode="maximized"] {
+  margin-top: 8px;
+}
+
+#titlebar,
+#customizableui-special-spring1,
+#customizableui-special-spring2,
+#sidebar-header,
+#TabsToolbar {
+  visibility: collapse;
+}
+*/
+
+/* With windows buttons */
+
+#main-window[sizemode="maximized"] {
+  margin-top: 2px;
+}
+
+#TabsToolbar > :not(.titlebar-buttonbox-container) {
+  visibility: hidden;
+}
+
+#nav-bar {
+  /* margin-right: 140px; */
+  margin-right: 180px; /* ~40px to drag the window (Drag Space wastes vertical space) */
+  margin-top: -31px;
+}
+
+#customizableui-special-spring1,
+#customizableui-special-spring2,
+#sidebar-header {
+  visibility: collapse;
+}
