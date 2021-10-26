@@ -10,6 +10,3 @@ $Global:DotfilesOptions = @{
 
 # Execute all modules
 Get-ChildItem $ProfileDir/modules -Filter *.psm1 -File | ForEach-Object { Import-Module $_.FullName }
-
-if(!(Test-Path -Path $ProfileDir/profile.custom.ps1)) { New-Item $ProfileDir/profile.custom.ps1 | Out-Null }
-. $ProfileDir/profile.custom.ps1
