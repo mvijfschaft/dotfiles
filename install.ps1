@@ -1,4 +1,4 @@
-. "./configs/powershell/profile.ps1"
+Get-ChildItem ./configs/powershell/modules -Filter *.psm1 -File | ForEach-Object { Import-Module $_.FullName -Verbose }
 
 if (-Not (Confirm-Elevated)) {
   Write-Error -Message "you have to run this script with administrator rights" -Category PermissionDenied

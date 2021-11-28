@@ -21,8 +21,6 @@ scoop install Keypirinha
 scoop install musescore
 scoop install nodejs
 scoop install nodejs-np
-scoop install spotify-latest
-scoop install steam
 scoop install sudo
 scoop install telegram
 scoop install vlc
@@ -55,31 +53,34 @@ scoop install Meslo-NF
 dotnet tool install -g dotnet-cleanup
 dotnet tool install -g dotnet-search
 
+## WINGET ##
+winget install Docker.DockerDesktopEdge
+winget install --name "Windows Terminal Preview" -s msstore --accept-package-agreements
+winget install --name "PowerToys (Preview)" -s winget --accept-package-agreements
+winget install --Name Steam -s winget --accept-package-agreements
+
+winget install Mojang.MinecraftLauncher
+winget install Microsoft.dotnetPreview
+winget install Microsoft.VisualStudioCode.Insiders
+
 New-Link ".\configs\git\.gitconfig" "~\.gitconfig"
 New-Link ".\configs\vscode\settings.json" "$env:APPDATA\Code\User\settings.json"
 New-Link ".\configs\vscode\keybindings.json" "$env:APPDATA\Code\User\keybindings.json"
 New-Link ".\configs\vscode\settings.json" "$env:APPDATA\Code - Insiders\User\settings.json"
 New-Link ".\configs\vscode\keybindings.json" "$env:APPDATA\Code - Insiders\User\keybindings.json"
+New-Link ".\configs\windowsterminal\settings.json" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 New-Link ".\configs\windowsterminal\settings.json" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json"
 # https://github.com/microsoft/winget-cli/releases
-New-Link ".\configs\winget\settings.json" "$env:LOCALAPPDATA\Microsoft\DesktopAppInstaller\LocalState\settings.json"
+New-Link ".\configs\winget\settings.json" "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json"
 New-Link ".\configs\powershell\profile.ps1" $PROFILE.CurrentUserCurrentHost
 New-Link ".\configs\keypirinha\Keypirinha.ini" "~\scoop\apps\Keypirinha\current\portable\Profile\User\Keypirinha.ini"
 New-Link ".\configs\ahk\AutoHotkeyU64.ahk" "~\Documents\AutoHotkeyU64.ahk"
-New-Link ".\configs\ahk\AutoHotkeyU64.custom.ahk" "~\Documents\AutoHotkeyU64.custom.ahk"
+New-ItemCheck -Path ".\configs\ahk" -Name "AutoHotkeyU64.custom.ahk" -SymlinkPath "~\Documents\AutoHotkeyU64.custom.ahk"
 New-Link ".\configs\PowerToys\keyboard-default.json" "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json"
 
 ## Add custom settings ##
-New-Item-Check -Path ".\configs\git" -Name ".gitconfig.custom" -SymlinkPath "~\.gitconfig.custom"
+New-ItemCheck -Path ".\configs\git" -Name ".gitconfig.custom" -SymlinkPath "~\.gitconfig.custom"
 $psPath = Split-Path $PROFILE.CurrentUserCurrentHost
-New-Item-Check -Path ".\configs\powershell" -Name "profile.custom.ps1" -SymlinkPath "${psPath}\profile.custom.ps1"
+New-ItemCheck -Path ".\configs\powershell" -Name "profile.custom.ps1" -SymlinkPath "${psPath}\profile.custom.ps1"
 Remove-Variable $psPath
 
-## WINGET ##
-winget install Docker.DockerDesktopEdge
-winget install Microsoft.WindowsTerminalPreview -s msstore
-winget install Microsoft.PowerToys
-winget install Microsoft.PowerShell
-winget install Mojang.MinecraftLauncher
-winget install Microsoft.dotnetPreview
-winget install Microsoft.VisualStudioCode.Insiders
