@@ -25,4 +25,5 @@
     "workbench.view.alwaysShowHeaderActions": true,
     "breadcrumbs.enabled": false,
     "workbench.colorTheme": "GitHub Dark Default",
+    "security.workspace.trust.untrustedFiles": "open",
 }

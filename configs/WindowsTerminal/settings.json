@@ -1,7 +1,16 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 2
+            },
+            "keys": "ctrl+3"
+        },
         {
             "command": "closePane",
             "keys": "ctrl+w"
@@ -12,7 +21,7 @@
                 "action": "openSettings",
                 "target": "settingsUI"
             },
-            "keys": "ctrl+shift+,"
+            "keys": "ctrl+shift+comma"
         },
         {
             "command": 
@@ -33,25 +42,17 @@
             "command": 
             {
                 "action": "switchToTab",
+                "index": 4
+            },
+            "keys": "ctrl+5"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
                 "index": 1
             },
             "keys": "ctrl+2"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 2
-            },
-            "keys": "ctrl+3"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 7
-            },
-            "keys": "ctrl+8"
         },
         {
             "command": 
@@ -64,10 +65,30 @@
         {
             "command": 
             {
-                "action": "switchToTab",
-                "index": 4
+                "action": "copy",
+                "singleLine": false
             },
-            "keys": "ctrl+5"
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "unbound",
+            "keys": "win+alt+`"
+        },
+        {
+            "command": "unbound",
+            "keys": "win+ctrl+alt+n"
+        },
+        {
+            "command": "unbound",
+            "keys": "win+ctrl+alt+comma"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 7
+            },
+            "keys": "ctrl+8"
         },
         {
             "command": 
@@ -88,22 +109,23 @@
         {
             "command": 
             {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": 
+            {
                 "action": "switchToTab",
                 "index": 8
             },
             "keys": "ctrl+9"
         },
         {
-            "command": "unbound",
-            "keys": "win+alt+`"
-        },
-        {
-            "command": "unbound",
-            "keys": "win+ctrl+alt+n"
-        },
-        {
-            "command": "unbound",
-            "keys": "win+ctrl+alt+,"
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -113,29 +135,8 @@
             "keys": "win+`"
         },
         {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
-        },
-        {
             "command": "paste",
             "keys": "ctrl+v"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
         }
     ],
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -146,8 +147,11 @@
             "backgroundImage": "https://github.com/mvijfschaft/dotfiles/raw/main/configs/WindowsTerminal/background.png",
             "backgroundImageOpacity": 0.20000000000000001,
             "colorScheme": "Pro",
-            "fontFace": "MesloLGMDZ NF",
-            "fontSize": 11,
+            "font": 
+            {
+                "face": "MesloLGMDZ NF",
+                "size": 11
+            },
             "useAcrylic": false
         },
         "list": 
@@ -158,7 +162,6 @@
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore"
             },
-            {},
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
@@ -172,12 +175,15 @@
                 "tabTitle": "MRPi - SSH"
             },
             {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
+                "name": "Windows PowerShell"
             },
-            {}
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            }
         ]
     },
     "schemes": 
