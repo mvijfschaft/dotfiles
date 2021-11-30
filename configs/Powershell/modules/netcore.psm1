@@ -55,7 +55,23 @@ function dnwr { dnw run @args }
 
 # misc.
 
-function dob { Get-ChildItem bin, obj -Directory -Recurse | Remove-Item -Force -Recurse }
+function dob() {
+  if (!$args) { $args = Get-SlnPath }
+  dotnet clean $args
+  dotnet clean -c Release $args
+}
+
+function rebuild() {
+  dob
+  restore
+  build
+}
+
+function Get-SlnPath {
+  $path = Get-ChildItem *.sln -Recurse -Depth 1 -File | Select-Object -ExpandProperty FullName -First 1
+  if (!$path) { throw 'No solution file found.' }
+  return $path
+}
 
 function sln {
   $Path = Get-ChildItem *.sln -Recurse -Depth 1 -File | Select-Object -First 1
