@@ -55,10 +55,15 @@ function dnwr { dnw run @args }
 
 # misc.
 
+function build { dotnet build (Get-SlnPath) --no-restore --nologo @args }
+function buildr { build --configuration Release @args }
+function restore { dotnet restore (Get-SlnPath) @args }
+function test { dotnet test (Get-SlnPath) @args }
+function sln { Start-Process (Get-SlnPath) }
+
 function dob() {
-  if (!$args) { $args = Get-SlnPath }
-  dotnet clean $args
-  dotnet clean -c Release $args
+  dotnet clean (Get-SlnPath) $args
+  dotnet clean (Get-SlnPath) -c Release $args
 }
 
 function rebuild() {
@@ -68,20 +73,9 @@ function rebuild() {
 }
 
 function Get-SlnPath {
-  $path = Get-ChildItem *.sln -Recurse -Depth 1 -File | Select-Object -ExpandProperty FullName -First 1
+  $path = Get-ChildItem -Filter *.sln -Recurse -Depth 1 -File | Select-Object -ExpandProperty FullName -First 1
   if (!$path) { throw 'No solution file found.' }
   return $path
-}
-
-function sln {
-  $Path = Get-ChildItem *.sln -Recurse -Depth 1 -File | Select-Object -First 1
-  if ($Path) {
-      Write-Output "Starting $Path"
-      Start-Process $Path
-  }
-  else {
-      Write-Error 'Solution file not found'
-  }
 }
 
 # PowerShell parameter completion shim for the dotnet CLI
