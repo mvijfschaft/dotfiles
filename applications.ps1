@@ -8,7 +8,6 @@ scoop bucket add sushi https://github.com/kidonng/sushi
 
 scoop update *
 
-scoop install 7zip
 scoop install adb
 scoop install android-studio
 scoop install autohotkey
@@ -23,6 +22,7 @@ scoop install nodejs
 scoop install nodejs-np
 scoop install sudo
 scoop install telegram
+scoop install ventoy
 scoop install vlc
 scoop install winrar
 scoop install z
@@ -54,14 +54,15 @@ dotnet tool install -g dotnet-cleanup
 dotnet tool install -g dotnet-search
 
 ## WINGET ##
+winget install Mojang.MinecraftLauncher
 winget install Docker.DockerDesktopEdge
 winget install --name "Windows Terminal Preview" -s msstore --accept-package-agreements
 winget install --name "PowerToys (Preview)" -s winget --accept-package-agreements
 winget install --Name Steam -s winget --accept-package-agreements
-
-winget install Mojang.MinecraftLauncher
 winget install Microsoft.dotnetPreview
 winget install Microsoft.VisualStudioCode.Insiders
+winget install --Name "7-Zip" -s winget --accept-package-agreements
+winget install --id "Microsoft.VisualStudio.2022.Community-Preview" --accept-package-agreements -s winget
 
 New-Link ".\configs\git\.gitconfig" "~\.gitconfig"
 New-Link ".\configs\vscode\settings.json" "$env:APPDATA\Code\User\settings.json"
