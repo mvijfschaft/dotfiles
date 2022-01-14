@@ -47,7 +47,7 @@ npm install --global git-recent
 ## Add Fonts ##
 scoop install cascadia-code
 scoop install cascadia-code-pl
-scoop install Meslo-NF
+sudo scoop install Meslo-NF --global
 
 ## Netcore tools ##
 dotnet tool install -g dotnet-cleanup
