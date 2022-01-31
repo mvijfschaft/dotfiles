@@ -26,4 +26,6 @@
     "breadcrumbs.enabled": false,
     "workbench.colorTheme": "GitHub Dark Default",
     "security.workspace.trust.untrustedFiles": "open",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active",
 }
