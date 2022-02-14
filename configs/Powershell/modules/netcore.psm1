@@ -55,15 +55,15 @@ function dnwr { dnw run @args }
 
 # misc.
 
-function build { dotnet build (Get-SlnPath) --no-restore --nologo @args }
+function build { dn build (Get-SlnPath) --no-restore --nologo @args }
 function buildr { build --configuration Release @args }
-function restore { dotnet restore (Get-SlnPath) @args }
-function test { dotnet test (Get-SlnPath) @args }
+function restore { dn restore (Get-SlnPath) @args }
+function test { dn test (Get-SlnPath) @args }
 function sln { Start-Process (Get-SlnPath) }
 
 function dob() {
-  dotnet clean (Get-SlnPath) $args
-  dotnet clean (Get-SlnPath) -c Release $args
+  dn clean (Get-SlnPath) $args
+  dn clean (Get-SlnPath) -c Release $args
 }
 
 function rebuild() {
