@@ -9,6 +9,7 @@ function ca { c --amend @args }
 function can { ca --no-edit @args }
 function dt { g difftool @args } # allows "Alt+Right", but diff one file at a time
 function dtd { dt --dir-diff @args } # diffs all files, but no "Alt+Right"
+function gb { g blame @args }
 function mt { g mergetool @args }
 
 function pull {
