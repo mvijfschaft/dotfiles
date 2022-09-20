@@ -7,8 +7,11 @@ using namespace System.Management.Automation.Language
 # but most of these bindings make sense in Windows mode as well.
 
 Import-Module PSReadLine
+# https://github.com/PowerShell/CompletionPredictor#use-the-predictor
+# Import-Module -Name CompletionPredictor
 
 Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 
 # Searching for commands with up/down arrow is really handy.  The
 # option "moves to end" is useful if you want the cursor at the end
