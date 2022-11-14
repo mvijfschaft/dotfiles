@@ -2,9 +2,17 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
-      "type": "prompt",
       "alignment": "left",
+      "newline": true,
       "segments": [
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#007ACC",
+          "properties": {
+            "time_format": "15:04:05"
+          }
+        },
         {
           "type": "root",
           "style": "powerline",
@@ -15,26 +23,9 @@
           }
         },
         {
-          "type": "session",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
-          "background": "#303030",
-          "properties": {
-            "default_user_name": "test",
-            "display_host": false,
-            "display_default": false
-          }
-        },
-        {
-          "type": "text"
-        },
-        {
           "type": "path",
           "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#100e23",
-          "background": "#8db0c0",
+          "foreground": "#56B6C2",
           "properties": {
             "home_icon": "\uF7DB",
             "folder_icon": "\uF115",
@@ -43,35 +34,36 @@
           }
         },
         {
-          "type": "text"
-        },
-        {
           "type": "git",
-          "style": "powerline",
+          "style": "plain",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#193549",
-          "background": "#95ffa4",
+          "foreground": "#95ffa4",
           "properties": {
             "branch_icon": "\uE0A0 ",
             "branch_gone_icon": "\uD83D\uDC80",
             "display_status_detail": true,
             "status_colors_enabled": true,
-            "ahead_color": "#99ff99",
-            "behind_color": "#ff9999",
-            "ahead_and_behind_color": "#ffff99",
             "display_status": true,
             "display_stash_count": true,
             "display_upstream_icon": true
           }
+        },
+        {
+          "foreground": "#DCB977",
+          "style": "plain",
+          "template": " \uf119",
+          "type": "exit"
+        },
+        {
+          "type": "newline"
         }
-      ]
-    },
-    {
-      "type": "newline"
+      ],
+      "type": "prompt"
     }
   ],
   "console_title": true,
   "console_title_style": "template",
   "console_title_template": "{{ .Env.TITLE }}",
-  "final_space": true
+  "final_space": true,
+  "version": 2
 }
