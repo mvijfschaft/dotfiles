@@ -43,6 +43,9 @@
 	minus-emph-style = syntax "#550000"
 	plus-emph-style = syntax "#005500"
 	syntax-theme = Dracula
+	navigate = true
+	light = false
+	side-by-side = true
 
 [delta "decorations"]
 	commit-decoration-style = bold yellow box ul
@@ -52,7 +55,7 @@
 
 [diff]
 	algorithm = histogram
-	colorMoved = blocks
+	colorMoved = default
 	colorMovedWS = allow-indentation-change
 	renameLimit = 9999
 	tool = vscode
