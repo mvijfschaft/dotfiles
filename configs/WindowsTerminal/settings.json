@@ -1,35 +1,73 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
-    [
-        { "command": { "action": "addMark" } },
-        { "command": { "action": "addMark", "color": "#ff00ff" } },
-        { "command": { "action": "addMark", "color": "#0000ff" } },
-        { "command": { "action": "clearAllMarks" } },
-        { "command": { "action": "scrollToMark", "direction": "previous" }, "keys": "ctrl+up" },
-        { "command": { "action": "scrollToMark", "direction": "next" }, "keys": "ctrl+down" },
-        { "command": { "action": "scrollToMark", "direction": "first" }, "keys": "ctrl+pgup" },
-        { "command": { "action": "scrollToMark", "direction": "last" }, "keys": "ctrl+pgdn" },
+    "actions": [
         {
-            "command":
-            {
+            "command": {
+                "action": "addMark"
+            }
+        },
+        {
+            "command": {
+                "action": "addMark",
+                "color": "#ff00ff"
+            }
+        },
+        {
+            "command": {
+                "action": "addMark",
+                "color": "#0000ff"
+            }
+        },
+        {
+            "command": {
+                "action": "clearAllMarks"
+            }
+        },
+        {
+            "command": {
+                "action": "scrollToMark",
+                "direction": "previous"
+            },
+            "keys": "ctrl+up"
+        },
+        {
+            "command": {
+                "action": "scrollToMark",
+                "direction": "next"
+            },
+            "keys": "ctrl+down"
+        },
+        {
+            "command": {
+                "action": "scrollToMark",
+                "direction": "first"
+            },
+            "keys": "ctrl+pgup"
+        },
+        {
+            "command": {
+                "action": "scrollToMark",
+                "direction": "last"
+            },
+            "keys": "ctrl+pgdn"
+        },
+        {
+            "command": {
                 "action": "openSettings",
                 "target": "settingsUI"
             },
             "keys": "ctrl+shift+comma"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "switchToTab",
                 "index": 5
             },
             "keys": "ctrl+6"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "switchToTab",
                 "index": 2
             },
@@ -44,16 +82,14 @@
             "keys": "ctrl+v"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "switchToTab",
                 "index": 1
             },
             "keys": "ctrl+2"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "newTab"
             },
             "keys": "ctrl+t"
@@ -63,64 +99,56 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "switchToTab",
                 "index": 0
             },
             "keys": "ctrl+1"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "switchToTab",
                 "index": 4
             },
             "keys": "ctrl+5"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "switchToTab",
                 "index": 3
             },
             "keys": "ctrl+4"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "switchToTab",
                 "index": 7
             },
             "keys": "ctrl+8"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "copy",
                 "singleLine": false
             },
             "keys": "ctrl+c"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "switchToTab",
                 "index": 6
             },
             "keys": "ctrl+7"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "switchToTab",
                 "index": 8
             },
             "keys": "ctrl+9"
         },
         {
-            "command":
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -131,24 +159,18 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "profiles":
-    {
-        "defaults":
-        {
-            "backgroundImage": "https://github.com/mvijfschaft/dotfiles/raw/main/configs/WindowsTerminal/background.png",
-            "backgroundImageOpacity": 0.20000000000000001,
+    "profiles": {
+        "defaults": {
             "colorScheme": "Marc",
             "experimental.autoMarkPrompts": true,
             "experimental.showMarksOnScrollbar": true,
-            "font":
-            {
+            "font": {
                 "face": "MesloLGM NF",
                 "size": 11
             },
-            "useAtlasEngine": false
+            "useAtlasEngine": true
         },
-        "list":
-        [
+        "list": [
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
@@ -198,8 +220,7 @@
             }
         ]
     },
-    "schemes":
-    [
+    "schemes": [
         {
             "background": "#212121",
             "black": "#151515",
@@ -293,7 +314,7 @@
             "yellow": "#C19C00"
         },
         {
-            "background": "#0D1117",
+            "background": "#080808",
             "black": "#0F1610",
             "blue": "#0066CC",
             "brightBlack": "#666666",
