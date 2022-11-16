@@ -1,11 +1,7 @@
-Import-Module posh-git
+oh-my-posh init pwsh --config "$Root/oh-my-posh/mtheme.omp.json" | Invoke-Expression
 
-# posh-git
-$GitPromptSettings.DefaultPromptAbbreviateGitDirectory = $true
-$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
+function Set-EnvironmentVariables {
+    $env:HEAD_REV = git rev-parse --short HEAD
+}
 
-# Oh my Posh
-$env:POSH_SESSION_DEFAULT_USER = $env:USERNAME # Hide default user@host
-Set-PoshPrompt -Theme  "$Root\oh-my-posh\mtheme.omp.json"
-
-function Set-PoshContext { $env:TITLE = Get-PromptPath }
+New-Alias -Name Set-PoshContext -Value Set-EnvironmentVariables -Scope Global -Force

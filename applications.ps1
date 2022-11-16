@@ -27,9 +27,9 @@ scoop install vlc
 scoop install winrar
 scoop install z
 
+scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+
 ## PowerShell modules ##
-Install-Module -Name oh-my-posh -Scope CurrentUser -Force
-Install-Module -Name posh-git -Scope CurrentUser -Force
 Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -SkipPublisherCheck -Force
 Install-Module -Name CompletionPredictor -Scope CurrentUser -Force
 Install-Module -Name Recycle -Scope CurrentUser -Force
