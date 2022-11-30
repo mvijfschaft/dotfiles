@@ -46,9 +46,6 @@ SetTitleMatchMode, RegEx
     ^n::        SendInput !{F10}        ; New connection
 #If
 
-; macOS-style shortcuts
-^q::            SendInput !{F4}         ; Quit app
-
 ; Volume control
 ^#!PgUp::       SendInput {Volume_Up}   ; Increase volume
 ^#!PgDn::       SendInput {Volume_Down} ; Decrease volume
