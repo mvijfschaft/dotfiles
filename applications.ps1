@@ -13,9 +13,6 @@ scoop install android-studio
 scoop install autohotkey
 scoop install calibre-normal
 scoop install delta
-scoop install docker-compose
-scoop install filezilla
-scoop install firefox-developer
 scoop install Keypirinha
 scoop install musescore
 scoop install nodejs
@@ -37,17 +34,13 @@ Install-Module -Name Terminal-Icons -Scope CurrentUser -Force
 
 Add-PoshGitToProfile
 
-## Code Extensions (for correct settings) ##
-code-insiders --install-extension GitHub.github-vscode-theme
-code-insiders --install-extension vscode-icons-team.vscode-icons
-
 ## Npm ##
 npm i -g cordova
 npm install --global git-recent
 
 ## Add Fonts ##
-scoop install cascadia-code
-scoop install cascadia-code-pl
+scoop install cascadia-code --global
+scoop install cascadia-code-pl --global
 sudo scoop install Meslo-NF --global
 
 ## Netcore tools ##
@@ -64,6 +57,10 @@ winget install Microsoft.dotnetPreview
 winget install Microsoft.VisualStudioCode.Insiders
 winget install --Name "7-Zip" -s winget --accept-package-agreements
 winget install --id "Microsoft.VisualStudio.2022.Community-Preview" --accept-package-agreements -s winget
+
+## Code Extensions (for correct settings) ##
+code-insiders --install-extension GitHub.github-vscode-theme
+code-insiders --install-extension vscode-icons-team.vscode-icons
 
 New-Link ".\configs\git\.gitconfig" "~\.gitconfig"
 New-Link ".\configs\vscode\settings.json" "$env:APPDATA\Code\User\settings.json"
