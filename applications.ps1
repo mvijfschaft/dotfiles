@@ -15,8 +15,7 @@ scoop install calibre-normal
 scoop install delta
 scoop install Keypirinha
 scoop install musescore
-scoop install nodejs
-scoop install nodejs-np
+scoop install nvm
 scoop install sudo
 scoop install telegram
 scoop install ventoy
@@ -25,6 +24,9 @@ scoop install winrar
 scoop install z
 
 scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+
+nvm install latest
+nvm on
 
 ## PowerShell modules ##
 Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -SkipPublisherCheck -Force
