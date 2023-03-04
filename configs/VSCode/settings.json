@@ -1,5 +1,5 @@
 {
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.fontFamily": "Cascadia Code PL",
     "editor.fontLigatures": true,
     "git.autofetch": true,
