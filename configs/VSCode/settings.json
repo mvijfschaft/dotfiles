@@ -24,7 +24,6 @@
     "editor.guides.bracketPairs": "active",
     "workbench.startupEditor": "none",
     "git.mergeEditor": true,
-
     "editor.inlineSuggest.enabled": true,
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
@@ -32,5 +31,5 @@
     "window.commandCenter": true,
     "window.menuBarVisibility": "compact",
     "editor.stickyScroll.enabled": true,
-    "window.zoomLevel": 1,
+    "diffEditor.ignoreTrimWhitespace": false
 }
