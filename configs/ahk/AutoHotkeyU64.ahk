@@ -1,6 +1,9 @@
-﻿#SingleInstance, Ignore
+﻿#Requires AutoHotkey >=2 <3
+
+#SingleInstance Ignore
 #UseHook
-SetTitleMatchMode, RegEx
+SetTitleMatchMode("RegEx")
+SetCapsLockState("AlwaysOff")
 
 ; ================================================================================
 ; Map Caps Lock to Alt-Tab
@@ -15,54 +18,55 @@ SetTitleMatchMode, RegEx
 
 ; VSCode-style shortcuts in Visual Studio
 ; (for the rest, go to Tools > Options > Environment > Keyboard and select 'Visual Studio Code')
-#IfWinActive, ahk_exe devenv\.exe
-    ^w::        SendInput ^{F4}         ; Close window/tab
-    ^/::        SendInput ^k^c^k^c      ; Comment selection (SA1005-style comments)
-    ^+/::       SendInput ^k^u^k^u      ; Uncomment selection
-    ^+l::       SendInput !+;           ; Select all occurrences of current selection
-    !LButton::  SendInput ^!{LButton}   ; Insert cursor
-#If
+#HotIf WinActive("ahk_exe devenv\.exe")
+    ^w::        SendInput "^{F4}"         ; Close window/tab
+    ^/::        SendInput "^k^c^k^c"      ; Comment selection (SA1005-style comments)
+    ^+/::       SendInput "^k^u^k^u"      ; Uncomment selection
+    ^+l::       SendInput "!+;"           ; Select all occurrences of current selection
+    !LButton::  SendInput "^!{LButton}"   ; Insert cursor
+#HotIf
 
 ; VSCode-style shortcuts in SQL Server Management Studio
-#IfWinActive, ahk_exe Ssms\.exe
-    ^w::        SendInput ^{F4}         ; Close window/tab
-    ^/::        SendInput ^k^c          ; Comment selection
-    ^+/::       SendInput ^k^u          ; Uncomment selection
-#If
+#HotIf WinActive("ahk_exe Ssms\.exe")
+    ^w::        SendInput "^{F4}"         ; Close window/tab
+    ^/::        SendInput "^k^c"         ; Comment selection
+    ^+/::       SendInput "^k^u"         ; Uncomment selection
+#HotIf
 
 ; VSCode-style shortcuts in LINQPad
-#IfWinActive, ahk_exe LINQPad\d*\.exe
-    ^/::        SendInput ^k^c          ; Comment selection
-    ^+/::       SendInput ^k^u          ; Uncomment selection
-    ^,::        SendInput !en           ; User Settings
-    ^p::        SendInput ^,            ; Quick Open, Go to File...
-    +!f::       SendInput ^ed           ; Format document
-#If
+#HotIf WinActive("ahk_exe LINQPad\d*\.exe")
+    ^/::        SendInput "^k^c"          ; Comment selection
+    ^+/::       SendInput "^k^u"          ; Uncomment selection
+    ^,::        SendInput "!en"           ; User Settings
+    ^p::        SendInput "^,"            ; Quick Open, Go to File...
+    +!f::       SendInput "^ed"           ; Format document
+#HotIf
 
 ; VSCode-style shortcuts in Oracle SQL Developer
-#IfWinActive, ahk_exe sqldeveloper64W\.exe
-    +!f::       SendInput ^{F7}         ; Format document
-    !LButton::  SendInput ^+{LButton}   ; Insert cursor
-    ^n::        SendInput !{F10}        ; New connection
-#If
+#HotIf WinActive("ahk_exe sqldeveloper64W\.exe")
+    +!f::       SendInput "^{F7}"         ; Format document
+    !LButton::  SendInput "^+{LButton}"   ; Insert cursor
+    ^n::        SendInput "!{F10}"        ; New connection
+#HotIf
 
 ; Volume control
-^#!PgUp::       SendInput {Volume_Up}   ; Increase volume
-^#!PgDn::       SendInput {Volume_Down} ; Decrease volume
-^#!End::        SendInput {Volume_Mute} ; Toggle mute
+^#!PgUp::       Volume_Up   ; Increase volume
+^#!PgDn::       Volume_Down ; Decrease volume
+^#!End::        Volume_Mute ; Toggle mute
 
 ; Ctrl+Shift+V paste without formatting on any app
 ; How to Paste Text Without the Extra Formatting
 ; https://www.howtogeek.com/186723/ask-htg-how-can-i-paste-text-without-the-formatting/
-#IfWinNotActive, ahk_exe (CiscoCollabHost)\.exe
+#HotIf !WinActive("ahk_exe (CiscoCollabHost)\.exe")
     $^+v::
-        ClipSaved := ClipboardAll ; save original clipboard contents
-        Clipboard = %Clipboard% ; remove formatting
-        Send ^v ; send the Ctrl+V command
-        Clipboard := ClipSaved ; restore the original clipboard contents
-        ClipSaved = ; clear the variable
-        return
-#If
+    {
+        ClipSaved := ClipboardAll() ; save original clipboard contents
+        A_Clipboard := A_Clipboard ; remove formatting
+        Send "^v" ; send the Ctrl+V command
+        A_Clipboard := ClipSaved ; restore the original clipboard contents
+        ClipSaved := "" ; clear the variable
+    }
+#HotIf
 
 ; ================================================================================
 ; Turn monitor off with a keyboard shortcut
@@ -70,17 +74,19 @@ SetTitleMatchMode, RegEx
 
 ; Win+\
 #\::
-    Sleep 1000
-    SendMessage 0x112, 0xF140, 0,, Program Manager  ; Start screensaver
-    SendMessage 0x112, 0xF170, 2,, Program Manager  ; Monitor off
-    return
+{
+    Sleep(1000)
+    SendMessage(0x112, 0xF140, 0,, "Program Manager")  ; Start screensaver
+    SendMessage(0x112, 0xF170, 2,, "Program Manager")  ; Monitor off
+}
 
 ; Win+Shift+\
 #+\::
-    Run rundll32.exe user32.dll`,LockWorkStation    ; Lock PC
-    Sleep 1000
-    SendMessage 0x112, 0xF170, 2,, Program Manager  ; Monitor off
-    return
+{
+    Run("rundll32.exe user32.dll`,LockWorkStation")    ; Lock PC
+    Sleep(1000)
+    SendMessage(0x112, 0xF170, 2,, "Program Manager")  ; Monitor off
+}
 
 ; ================================================================================
 ; Inverted question / exclamation marks
@@ -433,33 +439,33 @@ SetTitleMatchMode, RegEx
 
 ; Timestamp - ISO 8601 format
 ::now.iso::
-    FormatTime, CurrentDateTime, %A_NowUTC%, yyyy-MM-ddTHH:mm:ssZ
-    SendInput %CurrentDateTime%
-    return
+{
+    SendInput(FormatTime(A_NowUTC, "yyyy-MM-ddTHH:mm:ssZ"))
+}
 
 ; Timestamp - yyyyMMddHHmmss format
-    ::now.ts::
-    FormatTime, CurrentDateTime, %A_NowUTC%, yyyyMMddHHmmss
-    SendInput %CurrentDateTime%
-    return
+::now.ts::
+{
+    SendInput(FormatTime(A_NowUTC, "yyyyMMddHHmmss"))
+}
 
 ; Current date
 ::date::
-    FormatTime, CurrentDateTime, %A_NowUTC%, yyyy-MM-dd
-    SendInput %CurrentDateTime%
-    return
+{
+    SendInput(FormatTime(A_NowUTC, "yyyy-MM-dd"))
+}
 
 ; Current time
 ::time::
-    FormatTime, CurrentDateTime, %A_NowUTC%, HH:mm
-    SendInput %CurrentDateTime%
-    return
+{
+    SendInput(FormatTime(A_NowUTC, "HH:mm"))
+}
 
 ; Current date & time
 ::now::
-    FormatTime, CurrentDateTime, %A_NowUTC%, yyyy-MM-dd HH:mm
-    SendInput %CurrentDateTime%
-    return
+{
+    SendInput(FormatTime(A_NowUTC, "yyyy-MM-dd HH:mm"))
+}
 
 ; Arrows
 ::^|::↑   ; UPWARDS ARROW
@@ -483,6 +489,6 @@ SetTitleMatchMode, RegEx
 
 ; ================================================================================
 ; Misc.
-!=::SendInput ^{NumpadAdd}  ; Alt+= -> Size all columns to fit in listview controls
+!=::SendInput "^{NumpadAdd}"  ; Alt+= -> Size all columns to fit in listview controls
 
 #Include %A_ScriptDir%\AutoHotkeyU64.custom.ahk

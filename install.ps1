@@ -22,12 +22,21 @@ $trigger = New-ScheduledTaskTrigger -AtLogOn -User $env:UserName
 $action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "-WindowStyle Hidden scoop cleanup *"
 Register-ScheduledTask -TaskName "Scoop Cleanup" -User $env:UserName -Trigger  $trigger -Action $action
 
-$trigger = New-ScheduledTaskTrigger -AtLogOn -User $env:UserName
-$action = New-ScheduledTaskAction -Execute "%HOMEPATH%/scoop/apps/autohotkey/current/AutoHotkeyU64.exe"
-Register-ScheduledTask -TaskName "Run AHK" -User $env:UserName -Trigger  $trigger -Action $action
-
-$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1) -RepetitionInterval (New-TimeSpan -Minutes 1)
-$action = New-ScheduledTaskAction -Execute "%HOMEPATH%/scoop/apps/autohotkey/current/AutoHotkeyU64.exe"
-Register-ScheduledTask -TaskName "Run AHK (if break)" -User $env:UserName -Trigger  $trigger -Action $action
+Register-ScheduledTask `
+    -TaskName 'AutoHotkey' `
+    -Trigger (New-ScheduledTaskTrigger `
+        -AtLogOn `
+        -User $env:USERNAME) `
+    -Action (New-ScheduledTaskAction `
+        -Execute 'powershell' `
+        -Argument '-NoProfile -WindowStyle Hidden "while ($true) { autohotkey configs/ahk/AutoHotkeyU64.ahk }"' `
+        -WorkingDirectory $PSScriptRoot) `
+    -Settings (New-ScheduledTaskSettingsSet `
+        -DontStopOnIdleEnd `
+        -AllowStartIfOnBatteries `
+        -DontStopIfGoingOnBatteries `
+        -ExecutionTimeLimit 0) `
+    -RunLevel Highest `
+    -Force
 
 Write-Host "Installation complete."
