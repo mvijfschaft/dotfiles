@@ -12,14 +12,6 @@
         {
             "command": 
             {
-                "action": "scrollToMark",
-                "direction": "next"
-            },
-            "keys": "ctrl+down"
-        },
-        {
-            "command": 
-            {
                 "action": "addMark",
                 "color": "#FF00FF"
             }
@@ -36,9 +28,9 @@
             "command": 
             {
                 "action": "scrollToMark",
-                "direction": "last"
+                "direction": "next"
             },
-            "keys": "ctrl+pgdn"
+            "keys": "ctrl+down"
         },
         {
             "command": 
@@ -48,14 +40,15 @@
             }
         },
         {
-            "command": "clearAllMarks"
-        },
-        {
             "command": 
             {
-                "action": "openSettings",
-                "target": "settingsUI"
-            }
+                "action": "scrollToMark",
+                "direction": "last"
+            },
+            "keys": "ctrl+pgdn"
+        },
+        {
+            "command": "clearAllMarks"
         },
         {
             "command": 
@@ -64,6 +57,13 @@
                 "direction": "first"
             },
             "keys": "ctrl+pgup"
+        },
+        {
+            "command": 
+            {
+                "action": "openSettings",
+                "target": "settingsUI"
+            }
         },
         {
             "command": 
@@ -169,6 +169,12 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": 
@@ -209,15 +215,9 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{1cd79813-5972-56cb-badb-ba5ee12693c5}",
-                "hidden": false,
-                "name": "rancher-desktop",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{1bdae7ec-8ca6-5caa-8453-8b6fe78b2748}",
-                "hidden": false,
-                "name": "rancher-desktop-data",
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl"
             }
         ]

@@ -75,8 +75,7 @@ New-Link ".\configs\windowsterminal\settings.json" "$env:LOCALAPPDATA\Packages\M
 New-Link ".\configs\winget\settings.json" "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json"
 New-Link ".\configs\powershell\profile.ps1" $PROFILE.CurrentUserCurrentHost
 New-Link ".\configs\keypirinha\Keypirinha.ini" "~\scoop\apps\Keypirinha\current\portable\Profile\User\Keypirinha.ini"
-New-Link ".\configs\ahk\AutoHotkeyU64.ahk" "~\Documents\AutoHotkeyU64.ahk"
-New-ItemCheck -Path ".\configs\ahk" -Name "AutoHotkeyU64.custom.ahk" -SymlinkPath "~\Documents\AutoHotkeyU64.custom.ahk"
+New-Link ".\configs\ahk\dotfiles.ahk" "~\Documents\dotfiles.ahk"
 New-Link ".\configs\PowerToys\keyboard-default.json" "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json"
 
 ## Add custom settings ##
@@ -84,4 +83,3 @@ New-ItemCheck -Path ".\configs\git" -Name ".gitconfig.custom" -SymlinkPath "~\.g
 $psPath = Split-Path $PROFILE.CurrentUserCurrentHost
 New-ItemCheck -Path ".\configs\powershell" -Name "profile.custom.ps1" -SymlinkPath "${psPath}\profile.custom.ps1"
 Remove-Variable $psPath
-
