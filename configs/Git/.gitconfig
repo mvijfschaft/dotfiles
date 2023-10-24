@@ -21,8 +21,8 @@
 [core]
 	pager = delta
 
-[credential]
-	helper = manager-core
+[http]
+	sslBackend = schannel
 
 [delta]
 	file-style = "#ffffff"
