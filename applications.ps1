@@ -77,6 +77,7 @@ New-Link ".\configs\powershell\profile.ps1" $PROFILE.CurrentUserCurrentHost
 New-Link ".\configs\keypirinha\Keypirinha.ini" "~\scoop\apps\Keypirinha\current\portable\Profile\User\Keypirinha.ini"
 New-Link ".\configs\ahk\dotfiles.ahk" "~\Documents\dotfiles.ahk"
 New-Link ".\configs\PowerToys\keyboard-default.json" "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json"
+New-Link ".\configs\wsl\.wslconfig" "~\.wslconfig"
 
 ## Add custom settings ##
 New-ItemCheck -Path ".\configs\git" -Name ".gitconfig.custom" -SymlinkPath "~\.gitconfig.custom"
