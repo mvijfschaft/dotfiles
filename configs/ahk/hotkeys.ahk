@@ -3,14 +3,6 @@
 
 #UseHook
 SetTitleMatchMode("RegEx")
-SetCapsLockState("AlwaysOff")
-
-*CapsLock::
-{
-    if (KeyWait("CapsLock", "T0.2")) {
-        SendInput "{Blind}``"
-    }
-}
 
 #HotIf GetKeyState("CapsLock", "P")
 
@@ -103,31 +95,3 @@ SetCapsLockState("AlwaysOff")
 
 ; macOS-style shortcuts
 ^q::            SendInput "!{F4}"       ; Quit app
-
-; Common special chars with AltGr
->!!::¡
->!?::¿
->!<!a::à
->!<!A::À
->!<!e::è
->!<!E::È
->!<!i::ì
->!<!I::Ì
->!<!o::ò
->!<!O::Ò
->!<!u::ù
->!<!U::Ù
->!a::á
->!A::Á
->!c::ç
->!C::Ç
->!e::é
->!E::É
->!i::í
->!I::Í
->!n::ñ
->!N::Ñ
->!o::ó
->!O::Ó
->!u::ú
->!U::Ú

@@ -20,6 +20,7 @@ scoop install sudo
 scoop install telegram
 scoop install ventoy
 scoop install vlc
+scoop install wincompose
 scoop install winrar
 scoop install z
 
@@ -77,6 +78,7 @@ New-Link ".\configs\powershell\profile.ps1" $PROFILE.CurrentUserCurrentHost
 New-Link ".\configs\keypirinha\Keypirinha.ini" "~\scoop\apps\Keypirinha\current\portable\Profile\User\Keypirinha.ini"
 New-Link ".\configs\ahk\dotfiles.ahk" "~\Documents\dotfiles.ahk"
 New-Link ".\configs\PowerToys\keyboard-default.json" "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json"
+New-Link ".\configs\WinCompose\.XCompose" "~\.XCompose"
 New-Link ".\configs\wsl\.wslconfig" "~\.wslconfig"
 
 ## Add custom settings ##
