@@ -30,6 +30,17 @@
     "editor.minimap.enabled": false,
     "window.commandCenter": true,
     "window.menuBarVisibility": "compact",
-    "editor.stickyScroll.enabled": true,
-    "diffEditor.ignoreTrimWhitespace": false
+    "cSpell.userWords": [
+        "Reindex"
+    ],
+    "workbench.editor.showTabs": "multiple",
+    "workbench.accounts.experimental.showEntitlements": true,
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/node_modules": true,
+        "**/.git": true,
+        "**/.vscode": true,
+        "**/.vs": true,
+    }
 }

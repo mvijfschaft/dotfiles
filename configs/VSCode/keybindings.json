@@ -3,5 +3,9 @@
     {
         "key": "ctrl+k ctrl+s",
         "command": "workbench.action.terminal.clear"
+    },
+    {
+        "key": "ctrl+shift+alt+c",
+        "command": "workbench.files.action.compareFileWith"
     }
 ]
