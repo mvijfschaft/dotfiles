@@ -1,196 +1,39 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
-    [
-        {
-            "command":
-            {
-                "action": "addMark"
-            }
-        },
-        {
-            "command":
-            {
-                "action": "addMark",
-                "color": "#FF00FF"
-            }
-        },
-        {
-            "command":
-            {
-                "action": "scrollToMark",
-                "direction": "previous"
-            },
-            "keys": "ctrl+up"
-        },
-        {
-            "command":
-            {
-                "action": "scrollToMark",
-                "direction": "next"
-            },
-            "keys": "ctrl+down"
-        },
-        {
-            "command":
-            {
-                "action": "addMark",
-                "color": "#0000FF"
-            }
-        },
-        {
-            "command":
-            {
-                "action": "scrollToMark",
-                "direction": "last"
-            },
-            "keys": "ctrl+pgdn"
-        },
-        {
-            "command": "clearAllMarks"
-        },
-        {
-            "command":
-            {
-                "action": "scrollToMark",
-                "direction": "first"
-            },
-            "keys": "ctrl+pgup"
-        },
-        {
-            "command":
-            {
-                "action": "openSettings",
-                "target": "settingsUI"
-            }
-        },
-        {
-            "command":
-            {
-                "action": "switchToTab",
-                "index": 5
-            },
-            "keys": "ctrl+6"
-        },
-        {
-            "command":
-            {
-                "action": "switchToTab",
-                "index": 2
-            },
-            "keys": "ctrl+3"
-        },
-        {
-            "command": "closePane",
-            "keys": "ctrl+w"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "command":
-            {
-                "action": "switchToTab",
-                "index": 1
-            },
-            "keys": "ctrl+2"
-        },
-        {
-            "command":
-            {
-                "action": "newTab"
-            },
-            "keys": "ctrl+t"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command":
-            {
-                "action": "switchToTab",
-                "index": 0
-            },
-            "keys": "ctrl+1"
-        },
-        {
-            "command":
-            {
-                "action": "switchToTab",
-                "index": 3
-            },
-            "keys": "ctrl+4"
-        },
-        {
-            "command":
-            {
-                "action": "switchToTab",
-                "index": 7
-            },
-            "keys": "ctrl+8"
-        },
-        {
-            "command":
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
-        },
-        {
-            "command":
-            {
-                "action": "switchToTab",
-                "index": 6
-            },
-            "keys": "ctrl+7"
-        },
-        {
-            "command":
-            {
-                "action": "switchToTab",
-                "index": 8
-            },
-            "keys": "ctrl+9"
-        },
-        {
-            "command":
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
-        }
-    ],
+    "$schema": "https://aka.ms/terminal-profiles-schema-preview",
+    "actions": [],
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "newTabMenu":
+    "newTabMenu": 
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles":
+    "profiles": 
     {
-        "defaults":
+        "defaults": 
         {
-            "colorScheme": "Marc",
+            "colorScheme": "schema-default",
             "experimental.autoMarkPrompts": true,
             "experimental.showMarksOnScrollbar": true,
-            "font":
+            "font": 
             {
                 "face": "MesloLGM NF",
                 "size": 11.0
             },
             "useAtlasEngine": true
         },
-        "list":
+        "list": 
         [
+            {
+                "commandline": "pwsh -NoLogo",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell Core",
+                "source": "Windows.Terminal.PowershellCore"
+            },
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
@@ -199,77 +42,18 @@
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
-                "name": "Command Prompt"
-            },
-            {
-                "commandline": "pwsh -NoLogo",
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "hidden": false,
-                "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore"
+                "name": "CMD"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": true,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
-    "schemes":
+    "schemes": 
     [
-        {
-            "background": "#212121",
-            "black": "#151515",
-            "blue": "#6C99BB",
-            "brightBlack": "#505050",
-            "brightBlue": "#6C99BB",
-            "brightCyan": "#7DD6CF",
-            "brightGreen": "#7E8E50",
-            "brightPurple": "#9F4E85",
-            "brightRed": "#AC4142",
-            "brightWhite": "#F5F5F5",
-            "brightYellow": "#E5B567",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#7DD6CF",
-            "foreground": "#D0D0D0",
-            "green": "#7E8E50",
-            "name": "Afterglow",
-            "purple": "#9F4E85",
-            "red": "#AC4142",
-            "selectionBackground": "#FFFFFF",
-            "white": "#D0D0D0",
-            "yellow": "#E5B567"
-        },
-        {
-            "background": "#0F1610",
-            "black": "#112616",
-            "blue": "#2F6A7F",
-            "brightBlack": "#3C4812",
-            "brightBlue": "#00AAE0",
-            "brightCyan": "#00E0C4",
-            "brightGreen": "#18E000",
-            "brightPurple": "#0058E0",
-            "brightRed": "#E08009",
-            "brightWhite": "#73FA91",
-            "brightYellow": "#BDE000",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#327F77",
-            "foreground": "#637D75",
-            "green": "#2F7E25",
-            "name": "AlienBlood",
-            "purple": "#47587F",
-            "red": "#7F2B27",
-            "selectionBackground": "#FFFFFF",
-            "white": "#647D75",
-            "yellow": "#717F24"
-        },
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
@@ -317,29 +101,6 @@
             "yellow": "#C19C00"
         },
         {
-            "background": "#080808",
-            "black": "#0F1610",
-            "blue": "#0066CC",
-            "brightBlack": "#666666",
-            "brightBlue": "#0099FF",
-            "brightCyan": "#669999",
-            "brightGreen": "#669966",
-            "brightPurple": "#996699",
-            "brightRed": "#CC6666",
-            "brightWhite": "#FFFFFF",
-            "brightYellow": "#999966",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#336666",
-            "foreground": "#EFF0EB",
-            "green": "#336633",
-            "name": "Marc",
-            "purple": "#663366",
-            "red": "#993333",
-            "selectionBackground": "#FFFFFF",
-            "white": "#999999",
-            "yellow": "#666633"
-        },
-        {
             "background": "#282C34",
             "black": "#282C34",
             "blue": "#61AFEF",
@@ -381,7 +142,7 @@
             "name": "One Half Light",
             "purple": "#A626A4",
             "red": "#E45649",
-            "selectionBackground": "#FFFFFF",
+            "selectionBackground": "#4F525D",
             "white": "#FAFAFA",
             "yellow": "#C18301"
         },
@@ -427,7 +188,7 @@
             "name": "Solarized Light",
             "purple": "#D33682",
             "red": "#DC322F",
-            "selectionBackground": "#FFFFFF",
+            "selectionBackground": "#073642",
             "white": "#EEE8D5",
             "yellow": "#B58900"
         },
@@ -473,7 +234,7 @@
             "name": "Tango Light",
             "purple": "#75507B",
             "red": "#CC0000",
-            "selectionBackground": "#FFFFFF",
+            "selectionBackground": "#555753",
             "white": "#D3D7CF",
             "yellow": "#C4A000"
         },
@@ -522,6 +283,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#C0C0C0",
             "yellow": "#808000"
+        },
+        {
+            "background": "#080808",
+            "black": "#0F1610",
+            "blue": "#0066CC",
+            "brightBlack": "#666666",
+            "brightBlue": "#0099FF",
+            "brightCyan": "#669999",
+            "brightGreen": "#669966",
+            "brightPurple": "#996699",
+            "brightRed": "#CC6666",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#999966",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#336666",
+            "foreground": "#EFF0EB",
+            "green": "#336633",
+            "name": "schema-default",
+            "purple": "#663366",
+            "red": "#993333",
+            "selectionBackground": "#FFFFFF",
+            "white": "#999999",
+            "yellow": "#666633"
         }
     ],
     "tabSwitcherMode": "mru",
