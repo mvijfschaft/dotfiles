@@ -28,8 +28,8 @@ Register-ScheduledTask `
         -AtLogOn `
         -User $env:USERNAME) `
     -Action (New-ScheduledTaskAction `
-        -Execute 'powershell' `
-        -Argument '-NoProfile -WindowStyle Hidden "while ($true) { autohotkey configs/ahk/dotfiles.ahk }"' `
+        -Execute '%USERPROFILE%\scoop\shims\autohotkey.exe' `
+        -Argument 'dotfiles.ahk' `
         -WorkingDirectory $PSScriptRoot) `
     -Settings (New-ScheduledTaskSettingsSet `
         -DontStopOnIdleEnd `

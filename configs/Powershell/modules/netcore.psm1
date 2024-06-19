@@ -88,5 +88,5 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 
 Set-Alias -Name 'console' -Value 'New-ConsoleApp'
 Set-Alias -Name 'e' -Value 'edit'
-Set-Alias -Name 'edit' -Value 'code-insiders'
+Set-Alias -Name 'edit' -Value 'code'
 Set-Alias -Name 'wm' -Value 'winmergeu'
