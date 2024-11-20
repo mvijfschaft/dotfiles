@@ -23,6 +23,8 @@ scoop install vlc
 scoop install wincompose
 scoop install winrar
 scoop install z
+scoop install zoxide
+scoop install helix
 
 scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
 
@@ -80,6 +82,9 @@ New-Link ".\configs\ahk\dotfiles.ahk" "~\Documents\dotfiles.ahk"
 New-Link ".\configs\PowerToys\keyboard-default.json" "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json"
 New-Link ".\configs\WinCompose\.XCompose" "~\.XCompose"
 New-Link ".\configs\wsl\.wslconfig" "~\.wslconfig"
+New-Link ".\configs\nu\config.nu" "$env:APPDATA\nushell\config.nu"
+New-Link ".\configs\nu\.zoxide.nu" "~\.cache\.zoxide.nu"
+New-Link ".\configs\nu\starship.nu" "~\.cache\starship\init.nu"
 
 ## Add custom settings ##
 New-ItemCheck -Path ".\configs\git" -Name ".gitconfig.custom" -SymlinkPath "~\.gitconfig.custom"
